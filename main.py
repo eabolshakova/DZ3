@@ -1,6 +1,22 @@
 import time
 
 
+def minimum(counts):
+    result = counts[0]
+    for count in counts:
+        if count < result:
+            result = count
+    return result
+
+
+def maximum(counts):
+    result = counts[0]
+    for count in counts:
+        if count > result:
+            result = count
+    return result
+
+
 def sum(counts):
     result = 0
     for count in counts:
@@ -15,32 +31,21 @@ def multiplication(counts):
     return result
 
 
-def minimum(counts):
-    result = counts[0]
-    for count in counts:
-        if count < result:
-            result = count
-    return result
+def read(file_name):
+    with open(file_name, 'r') as file:
+        counts = []
+        for line in file:
+            counts += list(map(int, line.split()))
+    return counts
 
 
-def maximun(counts):
-    result = counts[0]
-    for count in counts:
-        if count > result:
-            result = count
-    return result
-
-
-file_name = 'test6.txt'
-
-with open(file_name, 'r') as file:
-    counts = []
-    for line in file:
-        counts += list(map(int, line.split()))
+if __name__ == '__main__':
+    file_name = 'test6.txt'
+    counts = read(file_name)
     start = time.time()
     print('В файле:', str(counts)[1:-1])
     print('Минимальное:', minimum(counts))
-    print('Максимальное:', maximun(counts))
+    print('Максимальное:', maximum(counts))
     print('Сумма:', sum(counts))
     print('Произведение: ', multiplication(counts))
     end = time.time()
