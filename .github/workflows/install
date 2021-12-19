@@ -1,3 +1,0 @@
-- name: install pytest
-        run: |
-          pip3 install pytest
