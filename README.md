@@ -3,4 +3,4 @@
 
 
 
-![example workflow](https://github.com/eabolshakova/DZ3/actions/workflows/runs/1598724310/badge.svg?event=pull_request)
+![example workflow]https://github.com/eabolshakova/DZ3/tree/main/.github/workflows/python-app.yml/badge.svg?event=pull_request)
